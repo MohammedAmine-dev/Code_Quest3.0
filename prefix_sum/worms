@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    long long n;
+    cin>>n;
+    vector <int> piles(n);
+    for (int i=0;i<n;i++)
+    {
+        cin>>piles[i];
+    }
+    long long m;
+    cin>>m;
+    vector <int> juicy(m);
+    for (int i=0;i<m;i++)
+    {
+        cin>>juicy[i];
+    }
+    vector <long long> prefix(n+1,0);
+    for(int i=1;i<=n;i++)
+    {
+        prefix[i]=prefix[i-1]+piles[i-1];
+    }
+    
+    for (int i=0;i<m;i++)
+    {
+        int idx=lower_bound(prefix.begin(),prefix.end(),juicy[i])-prefix.begin();
+        cout<<idx<<endl;
+    }
+
+
+return 0;
+}

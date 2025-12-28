@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "odd_queries": "cpp",
+        "iostream": "cpp",
+        "worms": "cpp",
+        "maximum_sum": "cpp",
+        "robin_hood": "cpp"
+    }
+}
